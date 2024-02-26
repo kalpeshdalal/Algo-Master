@@ -62,7 +62,7 @@
 
             function fetchMessages() {
                 $.get('/get-messages', function (response) {
-
+                    console.log(response)
                     var isUserAtBottom = $('#messages').scrollTop() + $('#messages').innerHeight() >= $('#messages')[0].scrollHeight;
                     $('#messages').html('');
                     response.messages.forEach(function (message) {
